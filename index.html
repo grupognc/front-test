@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela StarWars</title>
+    <style>
+        body{
+            background-color:rgba(0, 0, 0, 0.863);
+        }
+        h1{
+            font: 40px Arial;
+            color: white;
+            text-align: center;
+        }
+        .nome{
+            position: absolute;
+            top: 18%;
+            left: 33%;
+            transform: translate(-50% -50%);
+            padding: 20px 30px;
+        }
+        .corDepele{
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translate(-50% -50%);
+            padding: 20px 30px;
+        }
+        .table{
+            position: absolute;
+            top: 40%;
+            left: 35.5%;
+            transform: translate(-50% -50%);
+            line-height: 30.7px;
+            width: 100px;
+            background-color: #dddddd;
+        }
+        #name{
+            position: absolute;
+            top: 40%;
+            left: 43.4%;
+            width: 100px;
+            width: 150px;
+            padding: 9px 15px;
+            outline: none;
+            border: 2px solid rgba(0, 0, 0, 0.39);  
+            font: 16px Arial;  
+            background-color: #dddddd;
+        }
+        #height{
+            position: absolute;
+            top: 45.5%;
+            left: 43.4%;
+            width: 100px;
+            width: 150px;
+            padding: 9px 15px;
+            outline: none;
+            border: 2px solid rgba(0, 0, 0, 0.39);  
+            font: 16px Arial; 
+            background-color: #dddddd;  
+        }
+        #mass{
+            position: absolute;
+            top: 50.6%;
+            left: 43.4%;
+            width: 100px;
+            width: 150px;
+            padding: 9px 15px;
+            outline: none;
+            border: 2px solid rgba(0, 0, 0, 0.39);
+            font: 16px Arial;
+            background-color: #dddddd;
+        }
+        #skin_color{
+            position: absolute;
+            top: 56%;
+            left: 43.4%;
+            width: 150px;
+            padding: 9px 15px;
+            outline: none;
+            border: 2px solid rgba(0, 0, 0, 0.39);
+            font: 16px Arial;
+            background-color: #dddddd;
+        }
+        #gender{
+            position: absolute;
+            top: 61.4%;
+            left: 43.4%;
+            width: 150px;
+            padding: 9px 15px;
+            outline: none;
+            border: 2px solid rgba(0, 0, 0, 0.39);
+            font: 16px Arial;
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+        <h1>Tabela StarWars</h1>
+    
+<select class="nome" multiple>
+
+<option class="nome1">Luke Skywalker</option>
+<option class="nome2">C-3PO</option>
+<option class="nome3">R2-D2</option>
+<option class="nome4">Darth Vader</option>
+<option class="nome5">Leia Organa</option>
+<option class="nome6">Owen Lars</option>
+<option class="nome7">Beru Whitesun lars</option>
+<option class="nome8">R5-D4</option>
+<option class="nome9">Biggs Darklighter</option>
+<option class="nome10">Obi-Wan Kenobi</option>
+
+</select>
+
+<select class="corDepele" multiple>
+
+    <option class="cor1">fair</option>
+    <option class="cor2">white,blue</option>
+    <option class="cor3">white</option> 
+    <option class="cor4">light</option>  
+    <option class="cor5">white,red</option>  
+     
+
+</select>
+
+
+    <table class="table" border="1px">
+        <tr>
+            <td>nome : </td>
+            <input type="text" id="name">
+        </tr>
+        <tr>
+            <td>altura : </td>
+            <input type="text" id="height">
+        </tr>
+        <tr>
+            <td>peso : </td>
+            <input type="text" id="mass">
+        </tr>
+        <tr>
+            <td>cor de pele : </td>
+            <input type="text" id="skin_color">
+        </tr>
+        <tr>
+            <td>genero : </td>
+            <input type="text" id="gender">
+        </tr>
+
+    </table>
+
+<script>
+
+    var nome = document.querySelector(".nome")
+
+    function nome1(){
+        var nome1 = document.querySelector(".nome1")
+        
+
+        var showData = (result) =>{
+            for(var campo in result){
+                if(document.querySelector("#" + campo)){
+                    document.querySelector("#" + campo).value = result[campo]  
+                  
+                }
+            }
+        }
+
+        nome.addEventListener("click", () =>{
+            if (nome.value==nome1.value){
+                console.log(nome1.value)
+                var options = {
+                    method: 'GET',
+                    mode: 'cors',
+                    Cache: 'default'
+                }    
+
+                fetch(`https://swapi.dev/api/people/1/`, options)
+                .then(response => {response.json()
+                    .then( data => showData(data))
+                })
+                .catch(e => console.log('deu erro: '+ e,message))
+            }
+        })
+    }
+    nome1()
+
+    function nome2(){
+        var nome2 = document.querySelector(".nome2")
+        
+
+        var showData = (result) =>{
+            for(var campo in result){
+                if(document.querySelector("#" + campo)){
+                    document.querySelector("#" + campo).value = result[campo]  
+                }
+            }
+        }
+
+        nome.addEventListener("click", () =>{
+            if (nome.value==nome2.value){
+                console.log(nome2.value)
+                var options = {
+                    method: 'GET',
+                    mode: 'cors',
+                    Cache: 'default'
+                }    
+
+                fetch(`https://swapi.dev/api/people/2/`, options)
+                .then(response => {response.json()
+                    .then( data => showData(data))
+                })
+                .catch(e => console.log('deu erro: '+ e,message))
+            }
+        })
+    }
+    nome2()
+
+    function nome3(){
+        var nome3 = document.querySelector(".nome3")
+        
+
+        var showData = (result) =>{
+            for(var campo in result){
+                if(document.querySelector("#" + campo)){
+                    document.querySelector("#" + campo).value = result[campo]  
+                }
+            }
+        }
+
+        nome.addEventListener("click", () =>{
+            if (nome.value==nome3.value){
+                console.log(nome3.value)
+                var options = {
+                    method: 'GET',
+                    mode: 'cors',
+                    Cache: 'default'
+                }    
+
+                fetch(`https://swapi.dev/api/people/3/`, options)
+                .then(response => {response.json()
+                    .then( data => showData(data))
+                })
+                .catch(e => console.log('deu erro: '+ e,message))
+            }
+        })
+    }
+    nome3()
+      
+    function nome4(){
+        var nome4 = document.querySelector(".nome4")
+        
+
+        var showData = (result) =>{
+            for(var campo in result){
+                if(document.querySelector("#" + campo)){
+                    document.querySelector("#" + campo).value = result[campo]  
+                }
+            }
+        }
+
+        nome.addEventListener("click", () =>{
+            if (nome.value==nome4.value){
+                console.log(nome4.value)
+                var options = {
+                    method: 'GET',
+                    mode: 'cors',
+                    Cache: 'default'
+                }    
+
+                fetch(`https://swapi.dev/api/people/4/`, options)
+                .then(response => {response.json()
+                    .then( data => showData(data))
+                })
+                .catch(e => console.log('deu erro: '+ e,message))
+            }
+        })
+    }
+    nome4()
+
+    function nome5(){
+        var nome5 = document.querySelector(".nome5")
+        
+
+        var showData = (result) =>{
+            for(var campo in result){
+                if(document.querySelector("#" + campo)){
+                    document.querySelector("#" + campo).value = result[campo]  
+                }
+            }
+        }
+
+        nome.addEventListener("click", () =>{
+            if (nome.value==nome5.value){
+                console.log(nome5.value)
+                var options = {
+                    method: 'GET',
+                    mode: 'cors',
+                    Cache: 'default'
+                }    
+
+                fetch(`https://swapi.dev/api/people/5/`, options)
+                .then(response => {response.json()
+                    .then( data => showData(data))
+                })
+                .catch(e => console.log('deu erro: '+ e,message))
+            }
+        })
+    }
+    nome5()
+
+    function nome6(){
+        var nome6 = document.querySelector(".nome6")
+        
+
+        var showData = (result) =>{
+            for(var campo in result){
+                if(document.querySelector("#" + campo)){
+                    document.querySelector("#" + campo).value = result[campo]  
+                }
+            }
+        }
+
+        nome.addEventListener("click", () =>{
+            if (nome.value==nome6.value){
+                console.log(nome6.value)
+                var options = {
+                    method: 'GET',
+                    mode: 'cors',
+                    Cache: 'default'
+                }    
+
+                fetch(`https://swapi.dev/api/people/6/`, options)
+                .then(response => {response.json()
+                    .then( data => showData(data))
+                })
+                .catch(e => console.log('deu erro: '+ e,message))
+            }
+        })
+    }
+    nome6()
+
+    function nome7(){
+        var nome7 = document.querySelector(".nome7")
+        
+
+        var showData = (result) =>{
+            for(var campo in result){
+                if(document.querySelector("#" + campo)){
+                    document.querySelector("#" + campo).value = result[campo]  
+                }
+            }
+        }
+
+        nome.addEventListener("click", () =>{
+            if (nome.value==nome7.value){
+                console.log(nome7.value)
+                var options = {
+                    method: 'GET',
+                    mode: 'cors',
+                    Cache: 'default'
+                }    
+
+                fetch(`https://swapi.dev/api/people/7/`, options)
+                .then(response => {response.json()
+                    .then( data => showData(data))
+                })
+                .catch(e => console.log('deu erro: '+ e,message))
+            }
+        })
+    }
+    nome7()
+
+    function nome8(){
+        var nome8 = document.querySelector(".nome8")
+        
+
+        var showData = (result) =>{
+            for(var campo in result){
+                if(document.querySelector("#" + campo)){
+                    document.querySelector("#" + campo).value = result[campo]  
+                }
+            }
+        }
+
+        nome.addEventListener("click", () =>{
+            if (nome.value==nome8.value){
+                console.log(nome8.value)
+                var options = {
+                    method: 'GET',
+                    mode: 'cors',
+                    Cache: 'default'
+                }    
+
+                fetch(`https://swapi.dev/api/people/8/`, options)
+                .then(response => {response.json()
+                    .then( data => showData(data))
+                })
+                .catch(e => console.log('deu erro: '+ e,message))
+            }
+        })
+    }
+    nome8()
+
+    function nome9(){
+        var nome9 = document.querySelector(".nome9")
+        
+
+        var showData = (result) =>{
+            for(var campo in result){
+                if(document.querySelector("#" + campo)){
+                    document.querySelector("#" + campo).value = result[campo]  
+                }
+            }
+        }
+
+        nome.addEventListener("click", () =>{
+            if (nome.value==nome9.value){
+                console.log(nome9.value)
+                var options = {
+                    method: 'GET',
+                    mode: 'cors',
+                    Cache: 'default'
+                }    
+
+                fetch(`https://swapi.dev/api/people/9/`, options)
+                .then(response => {response.json()
+                    .then( data => showData(data))
+                })
+                .catch(e => console.log('deu erro: '+ e,message))
+            }
+        })
+    }
+    nome9()
+
+    function nome10(){
+        var nome10 = document.querySelector(".nome10")
+        
+
+        var showData = (result) =>{
+            for(var campo in result){
+                if(document.querySelector("#" + campo)){
+                    document.querySelector("#" + campo).value = result[campo]  
+                }
+            }
+        }
+
+        nome.addEventListener("click", () =>{
+            if (nome.value==nome10.value){
+                console.log(nome10.value)
+                var options = {
+                    method: 'GET',
+                    mode: 'cors',
+                    Cache: 'default'
+                }    
+
+                fetch(`https://swapi.dev/api/people/10/`, options)
+                .then(response => {response.json()
+                    .then( data => showData(data))
+                })
+                .catch(e => console.log('deu erro: '+ e,message))
+            }
+        })
+    }
+    nome10()
+
+</script>
+
+
+</body>
+</html>
