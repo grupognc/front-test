@@ -1,0 +1,1723 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+ 
+        <!-- meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href= https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css>
+
+        
+        <!-- css do frameworks obtidos no site cdn.tatatables.net-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+        
+        
+        <!--Recurso do framework jQuery library file -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <!--Datatable plugin JS library file -->
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    
+
+    
+    </head>
+
+    <!-- título da aba do navegador-->
+    <title>Grupo GNC</title> 
+ 
+
+    <!-- (Recurso do framework Bootstrap) Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- (Recurso do framework Bootstrap) Option 2: Separate Popper and Bootstrap JS -->
+        
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+
+    <!-- (Recurso do framework Bootstrap) Option 2: Separate Popper and Bootstrap JS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+    <!--Recursos da biblioteca javascript que fazem parte do framework em uso-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+    </body>
+
+
+<!-- imagem da página-->
+<body>
+    <img src="imagem-personagens.png" class="img-fluid" alt="...">
+</body>
+
+<br>
+<br>
+<br>
+
+<!-- título principal-->
+<body>
+    <div class="container text-center">
+        <h1>Lista de pessoas Star Wars</h1>
+    </div> 
+
+<br>
+<br>
+<!-- menu dropdown que seleciona a cor da pele (As cores estão organizadas por ordem alfabética)-->
+<div class="container text-center">
+    <div class=" container col-6 col-md-3">  
+        <select id="cordapele" class="form-select" value="cdp" aria-label="Default select example">
+            <option selected>Filtre pela cor da pele</option> 
+            <option value="1">blue</option>
+            <option value="2">blue, grey</option>
+            <option value="3">brown</option>
+            <option value="4">brown mottle</option>
+            <option value="5">brown, white</option>
+            <option value="6">dark</option>
+            <option value="7">fair</option>
+            <option value="8">fair, green, yellow</option>
+            <option value="9">gold</option>
+            <option value="10">green</option>
+            <option value="11">green, grey</option>
+            <option value="12">green-tan, brown</option>
+            <option value="13">grey</option>
+            <option value="14">grey, blue</option>
+            <option value="15">grey, green, yellow</option>
+            <option value="16">grey, red</option>
+            <option value="17">grey, blue</option>
+            <option value="18">metal</option>
+            <option value="19">grey, blue</option>
+            <option value="20">mottled green</option>
+            <option value="21">orange</option>
+            <option value="22">pale</option>
+            <option value="23">red</option>
+            <option value="24">red, blue, white</option>
+            <option value="25">silver, red</option>
+            <option value="26">tan</option>
+            <option value="27">white</option>
+            <option value="28">white, blue</option>
+            <option value="29">white, red</option>
+            <option value="30">yellow</option>
+          </select>
+        </div>
+     </div>
+</div>     
+<br>
+<br>        
+  
+ <!-- campo de pesquisa - busca pelo nome (está funcionando)-->                  
+<div class="container text-center">
+        
+    <h6>Filtre pelo nome, digitando no campo ao lado:</h6> 
+        <table id="buscandonome" class="display" value="nome" style="width:100%">                   
+            <thead>
+                <tr>          
+                    <th></th>
+                    <th>name</th>
+                    <th>height</th>
+                    <th>mass</th>
+                    <th>hair_color</th>
+                    <th>skin_color</th>
+                    <th>eye_color</th>
+                    <th>birth_year</th>
+                    <th>gender</th>
+                    <th>homeworld</th>
+                    <th>films</th>
+                    <th>species</th>
+                    <th>vehicles</th>
+                    <th>starships</th>
+                    <th>created</th>
+                    <th>edited</th>
+                    <th>url</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>0</th>
+                    <td>Luke Skywalker</td>
+                    <td>172</td>
+                    <td>77</td>
+                    <td>blond</td>
+                    <td>fair</td>
+                    <td>blue</td>
+                    <td>19BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/1/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/vehicles/14/, https://swapi.dev/api/vehicles/30/]</td>
+                    <td>[https://swapi.dev/api/starships/12/, https://swapi.dev/api/starships/22/]</td>
+                    <td>2014-12-09T13:50:51.644000Z</td>
+                    <td>2014-12-20T21:17:56.891000Z</td>
+                    <td>https://swapi.dev/api/people/1/</td>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>C-3PO</td>
+                    <td>167</td>
+                    <td>75</td>
+                    <td>n/a</td>
+                    <td>gold</td>
+                    <td>yellow</td>
+                    <td>112BBY</td>
+                    <td>n/a</td>
+                    <td>https://swapi.dev/api/planets/1/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/2/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-10T15:10:51.357000Z</td>
+                    <td>2014-12-20T21:17:50.309000Z</td>
+                    <td>https://swapi.dev/api/people/2/</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>R2-D2</td>
+                    <td>96</td>
+                    <td>32</td>
+                    <td>n/a</td>
+                    <td>white, blue</td>
+                    <td>red</td>
+                    <td>33BBY</td>
+                    <td>n/a</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/2/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-10T15:11:50.376000Z</td>
+                    <td>2014-12-20T21:17:50.311000Z</td>
+                    <td>https://swapi.dev/api/people/3/</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Darth Vader</td>
+                    <td>202</td>
+                    <td>136</td>
+                    <td>none</td>
+                    <td>white</td>
+                    <td>yellow</td>
+                    <td>41.9BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/1/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/13/]</td>
+                    <td>2014-12-10T15:18:20.704000Z</td>
+                    <td>2014-12-20T21:17:50.313000Z</td>
+                    <td>https://swapi.dev/api/people/4/</td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td>Leia Organa</td>
+                    <td>150</td>
+                    <td>49</td>
+                    <td>brown</td>
+                    <td>light</td>
+                    <td>brown</td>
+                    <td>19BBY</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/2/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/vehicles/30/]</td>
+                    <td>[]</td>
+                    <td>2014-12-10T15:20:09.791000Z</td>
+                    <td>2014-12-20T21:17:50.315000Z</td>
+                    <td>https://swapi.dev/api/people/5/</td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td>Owen Lars</td>
+                    <td>178</td>
+                    <td>120</td>
+                    <td>brown, grey</td>
+                    <td>light</td>
+                    <td>blue</td>
+                    <td>52BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/1/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-10T15:52:14.024000Z</td>
+                    <td>2014-12-20T21:17:50.317000Z</td>
+                    <td>https://swapi.dev/api/people/6/</td>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td>Beru Whitesun lars</td>
+                    <td>165</td>
+                    <td>75</td>
+                    <td>brown</td>
+                    <td>light</td>
+                    <td>blue</td>
+                    <td>47BBY</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/1/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-10T15:53:41.121000Z</td>
+                    <td>2014-12-20T21:17:50.319000Z</td>
+                    <td>https://swapi.dev/api/people/7/</td>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td>R5-D4</td>
+                    <td>97</td>
+                    <td>32</td>
+                    <td>n/a</td>
+                    <td>white, red</td>
+                    <td>red</td>
+                    <td>unknown</td>
+                    <td>n/a</td>
+                    <td>https://swapi.dev/api/planets/1/</td>
+                    <td>[https://swapi.dev/api/films/1/]</td>
+                    <td>[https://swapi.dev/api/species/2/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-10T15:57:50.959000Z</td>
+                    <td>2014-12-20T21:17:50.321000Z</td>
+                    <td>https://swapi.dev/api/people/8/</td>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td>Biggs Darklighter</td>
+                    <td>183</td>
+                    <td>84</td>
+                    <td>black</td>
+                    <td>light</td>
+                    <td>brown</td>
+                    <td>24BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/1/</td>
+                    <td>[https://swapi.dev/api/films/1/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/12/]</td>
+                    <td>2014-12-10T15:59:50.509000Z</td>
+                    <td>2014-12-20T21:17:50.323000Z</td>
+                    <td>https://swapi.dev/api/people/9/</td>
+                </tr>
+                <tr>
+                    <th>9</th>
+                    <td>Obi-Wan Kenobi</td>
+                    <td>182</td>
+                    <td>77</td>
+                    <td>auburn, white</td>
+                    <td>fair</td>
+                    <td>blue-gray</td>
+                    <td>57BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/20/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/vehicles/38/]</td>
+                    <td>[https://swapi.dev/api/starships/48/, https://swapi.dev/api/starships/59/, https://swapi.dev/api/starships/64/, https://swapi.dev/api/starships/65/, https://swapi.dev/api/starships/74/]</td>
+                    <td>2014-12-10T16:16:29.192000Z</td>
+                    <td>2014-12-20T21:17:50.325000Z</td>
+                    <td>https://swapi.dev/api/people/10/</td>
+                </tr>
+                <tr>
+                    <th>10</th>
+                    <td>Anakin Skywalker</td>
+                    <td>188</td>
+                    <td>84</td>
+                    <td>blond</td>
+                    <td>fair</td>
+                    <td>blue</td>
+                    <td>41.9BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/1/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/vehicles/44/, https://swapi.dev/api/vehicles/46/]</td>
+                    <td>[https://swapi.dev/api/starships/39/, https://swapi.dev/api/starships/59/, https://swapi.dev/api/starships/65/]</td>
+                    <td>2014-12-10T16:20:44.310000Z</td>
+                    <td>2014-12-20T21:17:50.327000Z</td>
+                    <td>https://swapi.dev/api/people/11/</td>
+                  </tr>
+                  <tr>
+                    <th>11</th>
+                    <td>Wilhuff Tarkin</td>
+                    <td>180</td>
+                    <td>unknown</td>
+                    <td>auburn, grey</td>
+                    <td>fair</td>
+                    <td>blue</td>
+                    <td>64BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/21/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-10T16:26:56.138000Z</td>
+                    <td>2014-12-20T21:17:50.330000Z</td>
+                    <td>https://swapi.dev/api/people/12/</td>
+                  </tr>
+                  <tr>
+                    <th>12</th>
+                    <td>Chewbacca</td>
+                    <td>228</td>
+                    <td>112</td>
+                    <td>brown</td>
+                    <td>unknown</td>
+                    <td>blue</td>
+                    <td>200BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/14/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/3/]</td>
+                    <td>[https://swapi.dev/api/vehicles/19/]</td>
+                    <td>[https://swapi.dev/api/starships/10/, https://swapi.dev/api/starships/22/]</td>
+                    <td>2014-12-10T16:42:45.066000Z</td>
+                    <td>2014-12-20T21:17:50.332000Z</td>
+                    <td>https://swapi.dev/api/people/13/</td>
+                  </tr>
+                  <tr>
+                    <th>13</th>
+                    <td>Han Solo</td>
+                    <td>180</td>
+                    <td>80</td>
+                    <td>brown</td>
+                    <td>fair</td>
+                    <td>brown</td>
+                    <td>29BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/22/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/10/, https://swapi.dev/api/starships/22/]</td>
+                    <td>2014-12-10T16:49:14.582000Z</td>
+                    <td>2014-12-20T21:17:50.334000Z</td>
+                    <td>https://swapi.dev/api/people/14/</td>
+                  </tr>
+                  <tr>
+                    <th>14</th>
+                    <td>Greedo</td>
+                    <td>173</td>
+                    <td>74</td>
+                    <td>n/a</td>
+                    <td>green</td>
+                    <td>black</td>
+                    <td>44BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/23/</td>
+                    <td>[https://swapi.dev/api/films/1/]</td>
+                    <td>[https://swapi.dev/api/species/4/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-10T17:03:30.334000Z</td>
+                    <td>2014-12-20T21:17:50.336000Z</td>
+                    <td>https://swapi.dev/api/people/15/</td>
+                  </tr>
+                  <tr>
+                    <th>15</th>
+                    <td>Jabba Desilijic Tiure</td>
+                    <td>175</td>
+                    <td>1,358</td>
+                    <td>n/a</td>
+                    <td>green-tan, brown</td>
+                    <td>orange</td>
+                    <td>600BBY</td>
+                    <td>hermaphrodite</td>
+                    <td>https://swapi.dev/api/planets/24/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/4/]</td>
+                    <td>[https://swapi.dev/api/species/5/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-10T17:11:31.638000Z</td>
+                    <td>2014-12-20T21:17:50.338000Z</td>
+                    <td>https://swapi.dev/api/people/16/</td>
+                  </tr>
+                  <tr>
+                    <th>16</th>
+                    <td>Wedge Antilles</td>
+                    <td>170</td>
+                    <td>77</td>
+                    <td>brown</td>
+                    <td>fair</td>
+                    <td>hazel</td>
+                    <td>21BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/22/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/vehicles/14/]</td>
+                    <td>[https://swapi.dev/api/starships/12/]</td>
+                    <td>2014-12-12T11:08:06.469000Z</td>
+                    <td>2014-12-20T21:17:50.341000Z</td>
+                    <td>https://swapi.dev/api/people/18/</td>
+                  </tr>
+                  <tr>
+                    <th>17</th>
+                    <td>Jek Tono Porkins</td>
+                    <td>180</td>
+                    <td>110</td>
+                    <td>brown</td>
+                    <td>fair</td>
+                    <td>blue</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/26/</td>
+                    <td>[https://swapi.dev/api/films/1/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/12/]</td>
+                    <td>2014-12-12T11:16:56.569000Z</td>
+                    <td>2014-12-20T21:17:50.343000Z</td>
+                    <td>https://swapi.dev/api/people/19/</td>
+                  </tr>
+                  <tr>
+                    <th>18</th>
+                    <td>Yoda</td>
+                    <td>66</td>
+                    <td>17</td>
+                    <td>white</td>
+                    <td>green</td>
+                    <td>brown</td>
+                    <td>896BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/28/</td>
+                    <td>[https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-15T12:26:01.042000Z</td>
+                    <td>2014-12-20T21:17:50.345000Z</td>
+                    <td>https://swapi.dev/api/people/20/</td>
+                  </tr>
+                  <tr>
+                    <th>19</th>
+                    <td>Palpatine</td>
+                    <td>170</td>
+                    <td>75</td>
+                    <td>grey</td>
+                    <td>pale</td>
+                    <td>yellow</td>
+                    <td>82BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-15T12:48:05.971000Z</td>
+                    <td>2014-12-20T21:17:50.347000Z</td>
+                    <td>https://swapi.dev/api/people/21/</td>
+                  </tr>
+                  <tr>
+                    <th>20</th>
+                    <td>Boba Fett</td>
+                    <td>183</td>
+                    <td>78.2</td>
+                    <td>black</td>
+                    <td>fair</td>
+                    <td>brown</td>
+                    <td>31.5BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/10/</td>
+                    <td>[https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/5/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/21/]</td>
+                    <td>2014-12-15T12:49:32.457000Z</td>
+                    <td>2014-12-20T21:17:50.349000Z</td>
+                    <td>https://swapi.dev/api/people/22/</td>
+                  </tr>
+                  <tr>
+                    <th>21</th>
+                    <td>IG-88</td>
+                    <td>200</td>
+                    <td>140</td>
+                    <td>none</td>
+                    <td>metal</td>
+                    <td>red</td>
+                    <td>15BBY</td>
+                    <td>none</td>
+                    <td>https://swapi.dev/api/planets/28/</td>
+                    <td>[https://swapi.dev/api/films/2/]</td>
+                    <td>[https://swapi.dev/api/species/2/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-15T12:51:10.076000Z</td>
+                    <td>2014-12-20T21:17:50.351000Z</td>
+                    <td>https://swapi.dev/api/people/23/</td>
+                  </tr>
+                  <tr>
+                    <th>22</th>
+                    <td>Bossk</td>
+                    <td>190</td>
+                    <td>113</td>
+                    <td>none</td>
+                    <td>green</td>
+                    <td>red</td>
+                    <td>53BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/29/</td>
+                    <td>[https://swapi.dev/api/films/2/]</td>
+                    <td>[https://swapi.dev/api/species/7/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-15T12:53:49.297000Z</td>
+                    <td>2014-12-20T21:17:50.355000Z</td>
+                    <td>https://swapi.dev/api/people/24/</td>
+                  </tr>
+                  <tr>
+                    <th>23</th>
+                    <td>Lando Calrissian</td>
+                    <td>177</td>
+                    <td>79</td>
+                    <td>black</td>
+                    <td>dark</td>
+                    <td>brown</td>
+                    <td>31BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/30/</td>
+                    <td>[https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/10/]</td>
+                    <td>2014-12-15T12:56:32.683000Z</td>
+                    <td>2014-12-20T21:17:50.357000Z</td>
+                    <td>https://swapi.dev/api/people/25/</td>
+                  </tr>
+                  <tr>
+                    <th>24</th>
+                    <td>Lobot</td>
+                    <td>175</td>
+                    <td>79</td>
+                    <td>none</td>
+                    <td>light</td>
+                    <td>blue</td>
+                    <td>37BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/6/</td>
+                    <td>[https://swapi.dev/api/films/2/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-15T13:01:57.178000Z</td>
+                    <td>2014-12-20T21:17:50.359000Z</td>
+                    <td>https://swapi.dev/api/people/26/</td>
+                  </tr>
+                  <tr>
+                    <th>25</th>
+                    <td>Ackbar</td>
+                    <td>180</td>
+                    <td>83</td>
+                    <td>none</td>
+                    <td>brown mottle</td>
+                    <td>orange</td>
+                    <td>41BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/31/</td>
+                    <td>[https://swapi.dev/api/films/3/]</td>
+                    <td>[https://swapi.dev/api/species/8/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-18T11:07:50.584000Z</td>
+                    <td>2014-12-20T21:17:50.362000Z</td>
+                    <td>https://swapi.dev/api/people/27/</td>
+                  </tr>
+                  <tr>
+                    <th>26</th>
+                    <td>Mon Mothma</td>
+                    <td>150</td>
+                    <td>unknown</td>
+                    <td>auburn</td>
+                    <td>fair</td>
+                    <td>blue</td>
+                    <td>48BBY</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/32/</td>
+                    <td>[https://swapi.dev/api/films/3/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-18T11:12:38.895000Z</td>
+                    <td>2014-12-20T21:17:50.364000Z</td>
+                    <td>https://swapi.dev/api/people/28/</td>
+                  </tr>
+                  <tr>
+                    <th>27</th>
+                    <td>Arvel Crynyd</td>
+                    <td>unknown</td>
+                    <td>unknown</td>
+                    <td>brown</td>
+                    <td>fair</td>
+                    <td>brown</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/28/</td>
+                    <td>[https://swapi.dev/api/films/3/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/28/]</td>
+                    <td>2014-12-18T11:16:33.020000Z</td>
+                    <td>2014-12-20T21:17:50.367000Z</td>
+                    <td>https://swapi.dev/api/people/29/</td>
+                  </tr>
+                  <tr>
+                    <th>28</th>
+                    <td>Wicket Systri Warrick</td>
+                    <td>88</td>
+                    <td>20</td>
+                    <td>brown</td>
+                    <td>brown</td>
+                    <td>brown</td>
+                    <td>8BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/7/</td>
+                    <td>[https://swapi.dev/api/films/3/]</td>
+                    <td>[https://swapi.dev/api/species/9/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-18T11:21:58.954000Z</td>
+                    <td>2014-12-20T21:17:50.369000Z</td>
+                    <td>https://swapi.dev/api/people/30/</td>
+                  </tr>
+                  <tr>
+                    <th>29</th>
+                    <td>Nien Nunb</td>
+                    <td>160</td>
+                    <td>68</td>
+                    <td>none</td>
+                    <td>grey</td>
+                    <td>black</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/33/</td>
+                    <td>[https://swapi.dev/api/films/3/]</td>
+                    <td>[https://swapi.dev/api/species/10/]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/10/]</td>
+                    <td>2014-12-18T11:26:18.541000Z</td>
+                    <td>2014-12-20T21:17:50.371000Z</td>
+                    <td>https://swapi.dev/api/people/31/</td>
+                  </tr>
+                    <tr>
+                    <th>30</th>
+                    <td>Qui-Gon Jinn</td>
+                    <td>193</td>
+                    <td>89</td>
+                    <td>brown</td>
+                    <td>fair</td>
+                    <td>blue</td>
+                    <td>92BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/28/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/vehicles/38/]</td>
+                    <td>[]</td>
+                    <td>2014-12-19T16:54:53.618000Z</td>
+                    <td>2014-12-20T21:17:50.375000Z</td>
+                    <td>https://swapi.dev/api/people/32/</td>
+                  </tr>
+                  <tr>
+                    <th>31</th>
+                    <td>Nute Gunray</td>
+                    <td>191</td>
+                    <td>90</td>
+                    <td>none</td>
+                    <td>mottled green</td>
+                    <td>red</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/18/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/11/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-19T17:05:57.357000Z</td>
+                    <td>2014-12-20T21:17:50.377000Z</td>
+                    <td>https://swapi.dev/api/people/33/</td>
+                  </tr>
+                  <tr>
+                    <th>32</th>
+                    <td>Finis Valorum</td>
+                    <td>170</td>
+                    <td>unknown</td>
+                    <td>blond</td>
+                    <td>fair</td>
+                    <td>blue</td>
+                    <td>91BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/9/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-19T17:21:45.915000Z</td>
+                    <td>2014-12-20T21:17:50.379000Z</td>
+                    <td>https://swapi.dev/api/people/34/</td>
+                  </tr>
+                  <tr>
+                    <th>33</th>
+                    <td>Padmé Amidala</td>
+                    <td>185</td>
+                    <td>45</td>
+                    <td>brown</td>
+                    <td>light</td>
+                    <td>brown</td>
+                    <td>46BBY</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/39/, https://swapi.dev/api/starships/49/, https://swapi.dev/api/starships/64/]</td>
+                    <td>2014-12-19T17:28:26.926000Z</td>
+                    <td>2014-12-20T21:17:50.381000Z</td>
+                    <td>https://swapi.dev/api/people/35/</td>
+                  </tr>
+                  <tr>
+                    <th>34</th>
+                    <td>Jar Jar Binks</td>
+                    <td>196</td>
+                    <td>66</td>
+                    <td>none</td>
+                    <td>orange</td>
+                    <td>orange</td>
+                    <td>52BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/12/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-19T17:29:32.489000Z</td>
+                    <td>2014-12-20T21:17:50.383000Z</td>
+                    <td>https://swapi.dev/api/people/36/</td>
+                  </tr>
+                  <tr>
+                    <th>35</th>
+                    <td>Roos Tarpals</td>
+                    <td>224</td>
+                    <td>82</td>
+                    <td>none</td>
+                    <td>grey</td>
+                    <td>orange</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[https://swapi.dev/api/species/12/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-19T17:32:56.741000Z</td>
+                    <td>2014-12-20T21:17:50.385000Z</td>
+                    <td>https://swapi.dev/api/people/37/</td>
+                  </tr>
+                  <tr>
+                    <th>36</th>
+                    <td>Rugor Nass</td>
+                    <td>206</td>
+                    <td>unknown</td>
+                    <td>none</td>
+                    <td>green</td>
+                    <td>orange</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[https://swapi.dev/api/species/12/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-19T17:33:38.909000Z</td>
+                    <td>2014-12-20T21:17:50.388000Z</td>
+                    <td>https://swapi.dev/api/people/38/</td>
+                  </tr>
+                  <tr>
+                    <th>37</th>
+                    <td>Ric Olié</td>
+                    <td>183</td>
+                    <td>unknown</td>
+                    <td>brown</td>
+                    <td>fair</td>
+                    <td>blue</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/40/]</td>
+                    <td>2014-12-19T17:45:01.522000Z</td>
+                    <td>2014-12-20T21:17:50.392000Z</td>
+                    <td>https://swapi.dev/api/people/39/</td>
+                  </tr>
+                  <tr>
+                    <th>38</th>
+                    <td>Watto</td>
+                    <td>137</td>
+                    <td>unknown</td>
+                    <td>black</td>
+                    <td>blue, grey</td>
+                    <td>yellow</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/34/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/13/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-19T17:48:54.647000Z</td>
+                    <td>2014-12-20T21:17:50.395000Z</td>
+                    <td>https://swapi.dev/api/people/40/</td>
+                  </tr>
+                  <tr>
+                    <th>39</th>
+                    <td>Sebulba</td>
+                    <td>112</td>
+                    <td>40</td>
+                    <td>none</td>
+                    <td>grey, red</td>
+                    <td>orange</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/35/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[https://swapi.dev/api/species/14/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-19T17:53:02.586000Z</td>
+                    <td>2014-12-20T21:17:50.397000Z</td>
+                    <td>https://swapi.dev/api/people/41/</td>
+                  </tr>
+                  <tr>
+                    <th>40</th>
+                    <td>Quarsh Panaka</td>
+                    <td>183</td>
+                    <td>unknown</td>
+                    <td>black</td>
+                    <td>dark</td>
+                    <td>brown</td>
+                    <td>62BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-19T17:55:43.348000Z</td>
+                    <td>2014-12-20T21:17:50.399000Z</td>
+                    <td>https://swapi.dev/api/people/42/</td>
+                  </tr>
+                  <tr>
+                    <th>41</th>
+                    <td>Shmi Skywalker</td>
+                    <td>163</td>
+                    <td>unknown</td>
+                    <td>black</td>
+                    <td>fair</td>
+                    <td>brown</td>
+                    <td>72BBY</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/1/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-19T17:57:41.191000Z</td>
+                    <td>2014-12-20T21:17:50.401000Z</td>
+                    <td>https://swapi.dev/api/people/43/</td>
+                  </tr>
+                  <tr>
+                    <th>42</th>
+                    <td>Darth Maul</td>
+                    <td>175</td>
+                    <td>80</td>
+                    <td>none</td>
+                    <td>red</td>
+                    <td>yellow</td>
+                    <td>54BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/36/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[https://swapi.dev/api/species/22/]</td>
+                    <td>[https://swapi.dev/api/vehicles/42/]</td>
+                    <td>[https://swapi.dev/api/starships/41/]</td>
+                    <td>2014-12-19T18:00:41.929000Z</td>
+                    <td>2014-12-20T21:17:50.403000Z</td>
+                    <td>https://swapi.dev/api/people/44/</td>
+                  </tr>
+                  <tr>
+                    <th>43</th>
+                    <td>Bib Fortuna</td>
+                    <td>180</td>
+                    <td>unknown</td>
+                    <td>none</td>
+                    <td>pale</td>
+                    <td>pink</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/37/</td>
+                    <td>[https://swapi.dev/api/films/3/]</td>
+                    <td>[https://swapi.dev/api/species/15/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T09:47:02.512000Z</td>
+                    <td>2014-12-20T21:17:50.407000Z</td>
+                    <td>https://swapi.dev/api/people/45/</td>
+                  </tr>
+                  <tr>
+                    <th>44</th>
+                    <td>Ayla Secura</td>
+                    <td>178</td>
+                    <td>55</td>
+                    <td>none</td>
+                    <td>blue</td>
+                    <td>hazel</td>
+                    <td>48BBY</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/37/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/15/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T09:48:01.172000Z</td>
+                    <td>2014-12-20T21:17:50.409000Z</td>
+                    <td>https://swapi.dev/api/people/46/</td>
+                  </tr>
+                  <tr>
+                    <th>45</th>
+                    <td>Ratts Tyerel</td>
+                    <td>79</td>
+                    <td>15</td>
+                    <td>none</td>
+                    <td>grey, blue</td>
+                    <td>unknown</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/38/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[https://swapi.dev/api/species/16/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T09:53:15.086000Z</td>
+                    <td>2014-12-20T21:17:50.410000Z</td>
+                    <td>https://swapi.dev/api/people/47/</td>
+                  </tr>
+                  <tr>
+                    <th>46</th>
+                    <td>Dud Bolt</td>
+                    <td>94</td>
+                    <td>45</td>
+                    <td>none</td>
+                    <td>blue, grey</td>
+                    <td>yellow</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/39/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[https://swapi.dev/api/species/17/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T09:57:31.858000Z</td>
+                    <td>2014-12-20T21:17:50.414000Z</td>
+                    <td>https://swapi.dev/api/people/48/</td>
+                  </tr>
+                  <tr>
+                    <th>47</th>
+                    <td>Gasgano</td>
+                    <td>122</td>
+                    <td>unknown</td>
+                    <td>none</td>
+                    <td>white, blue</td>
+                    <td>black</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/40/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[https://swapi.dev/api/species/18/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T10:02:12.223000Z</td>
+                    <td>2014-12-20T21:17:50.416000Z</td>
+                    <td>https://swapi.dev/api/people/49/</td>
+                  </tr>
+                  <tr>
+                    <th>48</th>
+                    <td>Ben Quadinaros</td>
+                    <td>163</td>
+                    <td>65</td>
+                    <td>none</td>
+                    <td>grey, green, yellow</td>
+                    <td>orange</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/41/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[https://swapi.dev/api/species/19/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T10:08:33.777000Z</td>
+                    <td>2014-12-20T21:17:50.417000Z</td>
+                    <td>https://swapi.dev/api/people/50/</td>
+                  </tr>
+                  <tr>
+                    <th>49</th>
+                    <td>Mace Windu</td>
+                    <td>188</td>
+                    <td>84</td>
+                    <td>none</td>
+                    <td>dark</td>
+                    <td>brown</td>
+                    <td>72BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/42/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T10:12:30.846000Z</td>
+                    <td>2014-12-20T21:17:50.420000Z</td>
+                    <td>https://swapi.dev/api/people/51/</td>
+                  </tr>
+                  <tr>
+                    <th>50</th>
+                    <td>Ki-Adi-Mundi</td>
+                    <td>198</td>
+                    <td>82</td>
+                    <td>white</td>
+                    <td>pale</td>
+                    <td>yellow</td>
+                    <td>92BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/43/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/20/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T10:15:32.293000Z</td>
+                    <td>2014-12-20T21:17:50.422000Z</td>
+                    <td>https://swapi.dev/api/people/52/</td>
+                  </tr>
+                  <tr>
+                    <th>51</th>
+                    <td>Kit Fisto</td>
+                    <td>196</td>
+                    <td>87</td>
+                    <td>none</td>
+                    <td>green</td>
+                    <td>black</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/44/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/21/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T10:18:57.202000Z</td>
+                    <td>2014-12-20T21:17:50.424000Z</td>
+                    <td>https://swapi.dev/api/people/53/</td>
+                  </tr>
+                  <tr>
+                    <th>52</th>
+                    <td>Eeth Koth</td>
+                    <td>171</td>
+                    <td>unknown</td>
+                    <td>black</td>
+                    <td>brown</td>
+                    <td>brown</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/45/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/22/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T10:26:47.902000Z</td>
+                    <td>2014-12-20T21:17:50.427000Z</td>
+                    <td>https://swapi.dev/api/people/54/</td>
+                  </tr>
+                  <tr>
+                    <th>53</th>
+                    <td>Adi Gallia</td>
+                    <td>184</td>
+                    <td>50</td>
+                    <td>none</td>
+                    <td>dark</td>
+                    <td>blue</td>
+                    <td>unknown</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/9/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/23/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T10:29:11.661000Z</td>
+                    <td>2014-12-20T21:17:50.432000Z</td>
+                    <td>https://swapi.dev/api/people/55/</td>
+                  </tr>
+                  <tr>
+                    <th>54</th>
+                    <td>Saesee Tiin</td>
+                    <td>188</td>
+                    <td>unknown</td>
+                    <td>none</td>
+                    <td>pale</td>
+                    <td>orange</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/47/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/24/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T10:32:11.669000Z</td>
+                    <td>2014-12-20T21:17:50.434000Z</td>
+                    <td>https://swapi.dev/api/people/56/</td>
+                  </tr>
+                  <tr>
+                    <th>55</th>
+                    <td>Yarael Poof</td>
+                    <td>264</td>
+                    <td>unknown</td>
+                    <td>none</td>
+                    <td>white</td>
+                    <td>yellow</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/48/</td>
+                    <td>[https://swapi.dev/api/films/4/]</td>
+                    <td>[https://swapi.dev/api/species/25/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T10:34:48.725000Z</td>
+                    <td>2014-12-20T21:17:50.437000Z</td>
+                    <td>https://swapi.dev/api/people/57/</td>
+                  </tr>
+                  <tr>
+                    <th>56</th>
+                    <td>Plo Koon</td>
+                    <td>188</td>
+                    <td>80</td>
+                    <td>none</td>
+                    <td>orange</td>
+                    <td>black</td>
+                    <td>22BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/49/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/26/]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/48/]</td>
+                    <td>2014-12-20T10:49:19.859000Z</td>
+                    <td>2014-12-20T21:17:50.439000Z</td>
+                    <td>https://swapi.dev/api/people/58/</td>
+                  </tr>
+                  <tr>
+                    <th>57</th>
+                    <td>Mas Amedda</td>
+                    <td>196</td>
+                    <td>unknown</td>
+                    <td>none</td>
+                    <td>blue</td>
+                    <td>blue</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/50/</td>
+                    <td>[https://swapi.dev/api/films/4/, https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/27/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T10:53:26.457000Z</td>
+                    <td>2014-12-20T21:17:50.442000Z</td>
+                    <td>https://swapi.dev/api/people/59/</td>
+                  </tr>
+                  <tr>
+                    <th>58</th>
+                    <td>Gregar Typho</td>
+                    <td>185</td>
+                    <td>85</td>
+                    <td>black</td>
+                    <td>dark</td>
+                    <td>brown</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[https://swapi.dev/api/starships/39/]</td>
+                    <td>2014-12-20T11:10:10.381000Z</td>
+                    <td>2014-12-20T21:17:50.445000Z</td>
+                    <td>https://swapi.dev/api/people/60/</td>
+                  </tr>
+                  <tr>
+                    <th>59</th>
+                    <td>Cordé</td>
+                    <td>157</td>
+                    <td>unknown</td>
+                    <td>brown</td>
+                    <td>light</td>
+                    <td>brown</td>
+                    <td>unknown</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T11:11:39.630000Z</td>
+                    <td>2014-12-20T21:17:50.449000Z</td>
+                    <td>https://swapi.dev/api/people/61/</td>
+                  </tr>
+                  <tr>
+                    <th>60</th>
+                    <td>Cliegg Lars</td>
+                    <td>183</td>
+                    <td>unknown</td>
+                    <td>brown</td>
+                    <td>fair</td>
+                    <td>blue</td>
+                    <td>82BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/1/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T15:59:03.958000Z</td>
+                    <td>2014-12-20T21:17:50.451000Z</td>
+                    <td>https://swapi.dev/api/people/62/</td>
+                  </tr>
+                  <tr>
+                    <th>61</th>
+                    <td>Poggle the Lesser</td>
+                    <td>183</td>
+                    <td>80</td>
+                    <td>none</td>
+                    <td>green</td>
+                    <td>yellow</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/11/</td>
+                    <td>[https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/28/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T16:40:43.977000Z</td>
+                    <td>2014-12-20T21:17:50.453000Z</td>
+                    <td>https://swapi.dev/api/people/63/</td>
+                  </tr>
+                  <tr>
+                    <th>62</th>
+                    <td>Luminara Unduli</td>
+                    <td>170</td>
+                    <td>56.2</td>
+                    <td>black</td>
+                    <td>yellow</td>
+                    <td>blue</td>
+                    <td>58BBY</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/51/</td>
+                    <td>[https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/29/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T16:45:53.668000Z</td>
+                    <td>2014-12-20T21:17:50.455000Z</td>
+                    <td>https://swapi.dev/api/people/64/</td>
+                  </tr>
+                  <tr>
+                    <th>63</th>
+                    <td>Barriss Offee</td>
+                    <td>166</td>
+                    <td>50</td>
+                    <td>black</td>
+                    <td>yellow</td>
+                    <td>blue</td>
+                    <td>40BBY</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/51/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/29/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T16:46:40.440000Z</td>
+                    <td>2014-12-20T21:17:50.457000Z</td>
+                    <td>https://swapi.dev/api/people/65/</td>
+                  </tr>
+                  <tr>
+                    <th>64</th>
+                    <td>Dormé</td>
+                    <td>165</td>
+                    <td>unknown</td>
+                    <td>brown</td>
+                    <td>light</td>
+                    <td>brown</td>
+                    <td>unknown</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/8/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/1/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T16:49:14.640000Z</td>
+                    <td>2014-12-20T21:17:50.460000Z</td>
+                    <td>https://swapi.dev/api/people/66/</td>
+                  </tr>
+                  <tr>
+                    <th>65</th>
+                    <td>Dooku</td>
+                    <td>193</td>
+                    <td>80</td>
+                    <td>white</td>
+                    <td>fair</td>
+                    <td>brown</td>
+                    <td>102BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/52/</td>
+                    <td>[https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/1/]</td>
+                    <td>[https://swapi.dev/api/vehicles/55/]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T16:52:14.726000Z</td>
+                    <td>2014-12-20T21:17:50.462000Z</td>
+                    <td>https://swapi.dev/api/people/67/</td>
+                  </tr>
+                  <tr>
+                    <th>66</th>
+                    <td>Bail Prestor Organa</td>
+                    <td>191</td>
+                    <td>unknown</td>
+                    <td>black</td>
+                    <td>tan</td>
+                    <td>brown</td>
+                    <td>67BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/2/</td>
+                    <td>[https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/1/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T16:53:08.575000Z</td>
+                    <td>2014-12-20T21:17:50.463000Z</td>
+                    <td>https://swapi.dev/api/people/68/</td>
+                  </tr>
+                  <tr>
+                    <th>67</th>
+                    <td>Jango Fett</td>
+                    <td>183</td>
+                    <td>79</td>
+                    <td>black</td>
+                    <td>tan</td>
+                    <td>brown</td>
+                    <td>66BBY</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/53/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T16:54:41.620000Z</td>
+                    <td>2014-12-20T21:17:50.465000Z</td>
+                    <td>https://swapi.dev/api/people/69/</td>
+                  </tr>
+                  <tr>
+                    <th>68</th>
+                    <td>Zam Wesell</td>
+                    <td>168</td>
+                    <td>55</td>
+                    <td>blonde</td>
+                    <td>fair, green, yellow</td>
+                    <td>yellow</td>
+                    <td>unknown</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/54/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/30/]</td>
+                    <td>[https://swapi.dev/api/vehicles/45/]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T16:57:44.471000Z</td>
+                    <td>2014-12-20T21:17:50.468000Z</td>
+                    <td>https://swapi.dev/api/people/70/</td>
+                  </tr>
+                  <tr>
+                    <th>69</th>
+                    <td>Dexter Jettster</td>
+                    <td>198</td>
+                    <td>102</td>
+                    <td>none</td>
+                    <td>brown</td>
+                    <td>yellow</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/55/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/31/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T17:28:27.248000Z</td>
+                    <td>2014-12-20T21:17:50.470000Z</td>
+                    <td>https://swapi.dev/api/people/71/</td>
+                  </tr>
+                  <tr>
+                    <th>70</th>
+                    <td>Lama Su</td>
+                    <td>229</td>
+                    <td>88</td>
+                    <td>none</td>
+                    <td>grey</td>
+                    <td>black</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/10/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/32/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T17:30:50.416000Z</td>
+                    <td>2014-12-20T21:17:50.473000Z</td>
+                    <td>https://swapi.dev/api/people/72/</td>
+                  </tr>
+                  <tr>
+                    <th>71</th>
+                    <td>Taun We</td>
+                    <td>213</td>
+                    <td>unknown</td>
+                    <td>none</td>
+                    <td>grey</td>
+                    <td>black</td>
+                    <td>unknown</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/10/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/32/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T17:31:21.195000Z</td>
+                    <td>2014-12-20T21:17:50.474000Z</td>
+                    <td>https://swapi.dev/api/people/73/</td>
+                  </tr>
+                  <tr>
+                    <th>72</th>
+                    <td>Jocasta Nu</td>
+                    <td>167</td>
+                    <td>unknown</td>
+                    <td>white</td>
+                    <td>fair</td>
+                    <td>blue</td>
+                    <td>unknown</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/9/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/1/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T17:32:51.996000Z</td>
+                    <td>2014-12-20T21:17:50.476000Z</td>
+                    <td>https://swapi.dev/api/people/74/</td>
+                  </tr>
+                  <tr>
+                    <th>73</th>
+                    <td>R4-P17</td>
+                    <td>96</td>
+                    <td>unknown</td>
+                    <td>none</td>
+                    <td>silver, red</td>
+                    <td>red, blue</td>
+                    <td>unknown</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/28/</td>
+                    <td>[https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T17:43:36.409000Z</td>
+                    <td>2014-12-20T21:17:50.478000Z</td>
+                    <td>https://swapi.dev/api/people/75/</td>
+                  </tr>
+                  <tr>
+                    <th>74</th>
+                    <td>Wat Tambor</td>
+                    <td>193</td>
+                    <td>48</td>
+                    <td>none</td>
+                    <td>green, grey</td>
+                    <td>unknown</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/56/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/33/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T17:53:52.607000Z</td>
+                    <td>2014-12-20T21:17:50.481000Z</td>
+                    <td>https://swapi.dev/api/people/76/</td>
+                  </tr>
+                  <tr>
+                    <th>75</th>
+                    <td>San Hill</td>
+                    <td>191</td>
+                    <td>unknown</td>
+                    <td>none</td>
+                    <td>grey</td>
+                    <td>gold</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/57/</td>
+                    <td>[https://swapi.dev/api/films/5/]</td>
+                    <td>[https://swapi.dev/api/species/34/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T17:58:17.049000Z</td>
+                    <td>2014-12-20T21:17:50.484000Z</td>
+                    <td>https://swapi.dev/api/people/77/</td>
+                  </tr>
+                  <tr>
+                    <th>76</th>
+                    <td>Shaak Ti</td>
+                    <td>178</td>
+                    <td>57</td>
+                    <td>none</td>
+                    <td>red, blue, white</td>
+                    <td>black</td>
+                    <td>unknown</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/58/</td>
+                    <td>[https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/35/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T18:44:01.103000Z</td>
+                    <td>2014-12-20T21:17:50.486000Z</td>
+                    <td>https://swapi.dev/api/people/78/</td>
+                  </tr>
+                  <tr>
+                    <th>77</th>
+                    <td>Grievous</td>
+                    <td>216</td>
+                    <td>159</td>
+                    <td>none</td>
+                    <td>brown, white</td>
+                    <td>green, yellow</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/59/</td>
+                    <td>[https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/36/]</td>
+                    <td>[https://swapi.dev/api/vehicles/60/]</td>
+                    <td>[https://swapi.dev/api/starships/74/]</td>
+                    <td>2014-12-20T19:43:53.348000Z</td>
+                    <td>2014-12-20T21:17:50.488000Z</td>
+                    <td>https://swapi.dev/api/people/79/</td>
+                  </tr>
+                  <tr>
+                    <th>78</th>
+                    <td>Tarfful</td>
+                    <td>234</td>
+                    <td>136</td>
+                    <td>brown</td>
+                    <td>brown</td>
+                    <td>blue</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/14/</td>
+                    <td>[https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/3/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T19:46:34.209000Z</td>
+                    <td>2014-12-20T21:17:50.491000Z</td>
+                    <td>https://swapi.dev/api/people/80/</td>
+                  </tr>
+                  <tr>
+                    <th>79</th>
+                    <td>Raymus Antilles</td>
+                    <td>188</td>
+                    <td>79</td>
+                    <td>brown</td>
+                    <td>light</td>
+                    <td>brown</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/2/</td>
+                    <td>[https://swapi.dev/api/films/1/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T19:49:35.583000Z</td>
+                    <td>2014-12-20T21:17:50.493000Z</td>
+                    <td>https://swapi.dev/api/people/81/</td>
+                  </tr>
+                  <tr>
+                    <th>80</th>
+                    <td>Sly Moore</td>
+                    <td>178</td>
+                    <td>48</td>
+                    <td>none</td>
+                    <td>pale</td>
+                    <td>white</td>
+                    <td>unknown</td>
+                    <td>female</td>
+                    <td>https://swapi.dev/api/planets/60/</td>
+                    <td>[https://swapi.dev/api/films/5/, https://swapi.dev/api/films/6/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T20:18:37.619000Z</td>
+                    <td>2014-12-20T21:17:50.496000Z</td>
+                    <td>https://swapi.dev/api/people/82/</td>
+                  </tr>
+                  <tr>
+                    <th>81</th>
+                    <td>Tion Medon</td>
+                    <td>206</td>
+                    <td>80</td>
+                    <td>none</td>
+                    <td>grey</td>
+                    <td>black</td>
+                    <td>unknown</td>
+                    <td>male</td>
+                    <td>https://swapi.dev/api/planets/12/</td>
+                    <td>[https://swapi.dev/api/films/6/]</td>
+                    <td>[https://swapi.dev/api/species/37/]</td>
+                    <td>[]</td>
+                    <td>[]</td>
+                    <td>2014-12-20T20:35:04.260000Z</td>
+                    <td>2014-12-20T21:17:50.498000Z</td>
+                    <td>https://swapi.dev/api/people/83/</td>
+                  </tr>
+            </tbody>
+        </table>    
+</div>       
+    
+      
+
+<!-- Scripts para o uso do framework dataTables - site https://www.datatables.net/-->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+
+<!-- Script de comunicação entre o frontend e o back-->
+<script src="./js/acoes-da-tabela.js"></script>     
+
+</body>
+</html>
