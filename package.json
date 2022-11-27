@@ -1,0 +1,19 @@
+{
+  "name": "front-test",
+  "version": "1.0.0",
+  "description": "repositório para avaliação frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betobruklin19/front-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betobruklin19/front-test/issues"
+  },
+  "homepage": "https://github.com/betobruklin19/front-test#readme"
+}
