@@ -1,26 +1,30 @@
-# front-test
-repositório para avaliação frontend
+# Modificações Utilizando
 
-Será avaliado:
-- Clareza no código
-- Estrutura de commits
-- Organização do projeto
+- React 16.3.0
+- Quasar 1.0.0
+- Vue 2.9.6
+- Axios 0.21.1
 
-# Atividade a ser realizada
-Realizar o clone do repositório, crie uma nova branch com seu nome-sobrenome e implemente as seguinte fucionalidades, utilizando a linguagem/framework web de sua escolha. Atualize o `readme` com uma breve descrição de como o projeto deverá ser executado. Ao finalizar, crie um PR para avaliação.
+# Modificações
 
-Implementar uma tabela dinamica com o retorno do endpoint disponibilizado abaixo, onde:
+- Realização do Fork do projeto para meu github
+- Clone do projeto para o VS Code 
+- Criação do projeto quasar
+- Startar o projeto com "quasar dev"
+- Basicamente todas as modificações foram feitas em "Index.vue"
+- Recebendo os dados da api com o axios
+- Utilização de componentes do Quasar
+- Feito com HTML, CSS, Javascript.
 
- - [ ] Deverá possuir 2 selects com os filtros por nome e cor da pele. Ao selecionar multiplas opções desses selects, a tabela deverá ser atualizada de acordo com os filtros selecionados
- - [ ] A tabela deverá possuir as colunas com as propriedades e respectivos valores de acordo com o retorno da api nome , altura, peso, aniversário e genero.
- - [ ] A tabela deverá possuir um botão de detalhamento em cada linha, onde os demais valores retornados da api deverão estar disponiveis para visualização. Utilize o layout de acordo achar necessário
- - [ ] Possuir paginação
+- Lista dinâmica com Nome, Altura, Peso, Aniversário e Gênero como colunas
+- Preenchidos com dados vindos da api "https://swapi.dev/api/people/"
+- Filtrando por crescente e decrescente de cada item da coluna (Nome, Altura, Peso, Aniversário e Gênero).
+- Botão para exibição dos detalhes de cada pessoa com opção de mostrar e esconder
+- Campo de pesquisa para buscar pessoas da lista
+- Paginação dinâmica com opção de escolha de quantidade de itens por página
 
-# Endpoint
-Lista pessoas star wars
+# Ficou faltando implementar
 
-```'https://swapi.dev/api/people'```
-
-
-
+** Não consegui implementar o filtro solicitado (cor da pele)
+** Consegui trazer os outros dados da api na descrição da pessoa, porém como não fiz multiplas rotas na api, alguns dados ficaram mostrando somente a url de rota do endereço na api e não foi mostrada como deveria.
 
